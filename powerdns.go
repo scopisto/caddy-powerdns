@@ -15,7 +15,7 @@
 package powerdns
 
 import (
-	"github.com/libdns/powerdns"
+	"github.com/scopisto/powerdns"
 
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
