@@ -42,6 +42,7 @@ func (p *Provider) Provision(ctx caddy.Context) error {
 	p.Provider.ServerURL = repl.ReplaceAll(p.Provider.ServerURL, "")
 	p.Provider.APIToken = repl.ReplaceAll(p.Provider.APIToken, "")
 	p.Provider.ServerID = repl.ReplaceAll(p.Provider.ServerID, "")
+	p.Provider.Debug = repl.ReplaceAll(p.Provider.Debug, "")
 
 	return nil
 }
@@ -63,6 +64,9 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 		}
 		if d.NextArg() {
 			p.Provider.ServerID = d.Val()
+		}
+		if d.NextArg() {
+			p.Provider.Debug = d.Val()
 		}
 		if d.NextArg() {
 			return d.ArgErr()
@@ -95,6 +99,16 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 				}
 				if d.NextArg() {
 					p.Provider.ServerID = d.Val()
+				}
+				if d.NextArg() {
+					return d.ArgErr()
+				}
+			case "debug":
+				if p.Provider.Debug != "" {
+					return d.Err("Debug already set")
+				}
+				if d.NextArg() {
+					p.Provider.Debug = d.Val()
 				}
 				if d.NextArg() {
 					return d.ArgErr()
