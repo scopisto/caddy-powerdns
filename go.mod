@@ -6,7 +6,7 @@ toolchain go1.22.4
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
-	github.com/scopisto/powerdns v0.1.6
+	github.com/scopisto/powerdns v0.1.7
 )
 
 require (
@@ -19,10 +19,8 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/libdns/libdns v0.2.2 // indirect
-	github.com/libdns/powerdns v0.1.2 // indirect
 	github.com/mholt/acmez/v2 v2.0.1 // indirect
 	github.com/miekg/dns v1.1.59 // indirect
-	github.com/mittwald/go-powerdns v0.5.2 // indirect
 	github.com/onsi/ginkgo/v2 v2.13.2 // indirect
 	github.com/prometheus/client_golang v1.19.1 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
@@ -30,7 +28,7 @@ require (
 	github.com/prometheus/procfs v0.12.0 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
 	github.com/quic-go/quic-go v0.44.0 // indirect
-	github.com/scopisto/go-powerdns v0.6.5 // indirect
+	github.com/scopisto/go-powerdns v0.6.6 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
 	go.uber.org/mock v0.4.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
